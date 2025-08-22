@@ -1,6 +1,6 @@
 // Get elements
-const player1Input = document.getElementById("player-1");
-const player2Input = document.getElementById("player-2");
+const player1Input = document.getElementById("player1");
+const player2Input = document.getElementById("player2");
 const submitButton = document.getElementById("submit");
 const playerInputsDiv = document.getElementById("player-inputs");
 const gameBoardDiv = document.getElementById("game-board");
@@ -26,8 +26,8 @@ const winningCombinations = [
 
 // Start the game after getting player names
 submitButton.addEventListener("click", () => {
-  player1 = player1Input.value.trim() || "Player 1";
-  player2 = player2Input.value.trim() || "Player 2";
+  player1 = player1Input.value.trim() || "Player1";
+  player2 = player2Input.value.trim() || "Player2";
 
   currentPlayer = player1;
 
@@ -48,7 +48,7 @@ cells.forEach((cell, index) => {
 
     // Check winner
     if (checkWinner()) {
-      messageDiv.textContent = `${currentPlayer}, congratulations you won!`;
+      messageDiv.textContent = `${currentPlayer} congratulations you won!`;
       endGame();
       return;
     }
